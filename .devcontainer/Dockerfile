@@ -1,4 +1,4 @@
-# syntax=docker.io/docker/dockerfile:1.19
+# syntax=docker.io/docker/dockerfile:1.20
 # shellcheck shell=bash
 
 # see https://github.com/rust-lang/rustup/tags/
@@ -7,7 +7,7 @@ ARG RUSTUP_INIT_VERSION='1.28.2'
 
 # see https://github.com/cargo-bins/cargo-binstall/releases
 # renovate: datasource=github-releases depName=cargo-bins/cargo-binstall
-ARG CARGO_BINSTALL_VERSION='1.15.9'
+ARG CARGO_BINSTALL_VERSION='1.16.2'
 
 # see https://github.com/esp-rs/espup/releases/
 # renovate: datasource=github-releases depName=esp-rs/espup
@@ -30,7 +30,7 @@ ARG ESPFLASH_VERSION='4.2.0'
 # see https://crates.io/crates/esp-generate
 # see https://github.com/esp-rs/esp-generate/releases
 # renovate: datasource=github-releases depName=esp-rs/esp-generate
-ARG ESP_GENERATE_VERSION='1.0.0'
+ARG ESP_GENERATE_VERSION='1.0.1'
 
 # see https://github.com/devcontainers/images/tree/main/src/base-debian/history
 FROM mcr.microsoft.com/devcontainers/base:2.0.2-trixie
