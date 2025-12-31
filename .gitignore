@@ -1,3 +1,4 @@
 target/
 rust-esp32-hello-world/
+tmp/
 *.tmp

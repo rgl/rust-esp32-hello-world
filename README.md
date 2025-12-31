@@ -62,7 +62,7 @@ espflash board-info
 You should see something alike:
 
 ```
-espflash 4.2.0
+espflash 4.3.0
 /dev/ttyUSB0  EA60:10C4  Silicon Labs  CP2102 USB to UART Bridge Controller
 [2025-10-24T21:05:30Z INFO ] Serial port: '/dev/ttyUSB0'
 [2025-10-24T21:05:30Z INFO ] Connecting...
@@ -96,4 +96,12 @@ esp-generate \
   --option ci \
   --option vscode \
   rust-esp32-hello-world
+```
+
+List this repository dependencies (and which have newer versions):
+
+**NB** This has to be executed outside of the Dev Container.
+
+```bash
+GITHUB_COM_TOKEN='YOUR_GITHUB_PERSONAL_TOKEN' ./renovate.sh
 ```
