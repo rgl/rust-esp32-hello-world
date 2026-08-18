@@ -22,13 +22,13 @@ jobs:
             args: --all-features --workspace -- -D warnings
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Rust
-        uses: esp-rs/xtensa-toolchain@v1.6
+        uses: esp-rs/xtensa-toolchain@v1.7
         with:
           default: true
           buildtargets: esp32
-          version: "1.90.0"
+          version: "1.95.0"
           ldproxy: false
       - name: Enable caching
         uses: Swatinem/rust-cache@v2

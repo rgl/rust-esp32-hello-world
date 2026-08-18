@@ -10,7 +10,7 @@
 
 **NB** Also see https://github.com/rgl/platformio-esp32-arduino-hello-world.
 
-## Usage (Ubuntu 22.04 host)
+## Usage (Ubuntu 24.04 host)
 
 This ESP32 board connects to the computer as a USB serial device, as such, you should add your user to the `dialout` group:
 
@@ -47,7 +47,7 @@ rustup toolchain list -v
 You should see something alike:
 
 ```
-1.90.0-x86_64-unknown-linux-gnu (default) /home/vscode/.rustup/toolchains/1.90.0-x86_64-unknown-linux-gnu
+1.95.0-x86_64-unknown-linux-gnu (default) /home/vscode/.rustup/toolchains/1.95.0-x86_64-unknown-linux-gnu
 esp (active) /home/vscode/.rustup/toolchains/esp
 ```
 
@@ -62,7 +62,7 @@ espflash board-info
 You should see something alike:
 
 ```
-espflash 4.3.0
+espflash 4.5.0
 /dev/ttyUSB0  EA60:10C4  Silicon Labs  CP2102 USB to UART Bridge Controller
 [2025-10-24T21:05:30Z INFO ] Serial port: '/dev/ttyUSB0'
 [2025-10-24T21:05:30Z INFO ] Connecting...

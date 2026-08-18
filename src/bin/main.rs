@@ -31,7 +31,9 @@ async fn main(_spawner: Spawner) -> ! {
     esp_alloc::heap_allocator!(#[esp_hal::ram(reclaimed)] size: 98768);
 
     let timg0 = TimerGroup::new(peripherals.TIMG0);
-    esp_rtos::start(timg0.timer0);
+    let sw_interrupt =
+        esp_hal::interrupt::software::SoftwareInterruptControl::new(peripherals.SW_INTERRUPT);
+    esp_rtos::start(timg0.timer0, sw_interrupt.software_interrupt0);
 
     let mut counter = 0;
 

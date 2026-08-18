@@ -1,40 +1,40 @@
-# syntax=docker.io/docker/dockerfile:1.20
+# syntax=docker.io/docker/dockerfile:1.26
 # shellcheck shell=bash
 
 # see https://github.com/rust-lang/rustup/tags/
-# renovate: datasource=github-releases depName=rust-lang/rustup
-ARG RUSTUP_INIT_VERSION='1.28.2'
+# renovate: datasource=github-tags depName=rust-lang/rustup
+ARG RUSTUP_INIT_VERSION='1.29.0'
 
 # see https://github.com/cargo-bins/cargo-binstall/releases
 # renovate: datasource=github-releases depName=cargo-bins/cargo-binstall
-ARG CARGO_BINSTALL_VERSION='1.16.6'
+ARG CARGO_BINSTALL_VERSION='1.21.1'
 
 # see https://github.com/esp-rs/espup/releases/
 # renovate: datasource=github-releases depName=esp-rs/espup
-ARG ESPUP_VERSION='0.16.0'
+ARG ESPUP_VERSION='0.17.1'
 
 # see https://github.com/rust-lang/rust/releases
 # NB to make things simpler. keep this in sync with ESP_RUST_VERSION bellow.
 # renovate: datasource=github-tags depName=rust-lang/rust
-ARG RUST_VERSION='1.90.0'
+ARG RUST_VERSION='1.95.0'
 
 # see https://github.com/esp-rs/rust-build/releases
 # renovate: datasource=github-releases depName=esp-rs/rust-build
-ARG ESP_RUST_VERSION='1.90.0.0'
+ARG ESP_RUST_VERSION='1.95.0.0'
 
 # see https://crates.io/crates/espflash
 # see https://github.com/esp-rs/espflash/releases
 # renovate: datasource=github-releases depName=esp-rs/espflash
-ARG ESPFLASH_VERSION='4.3.0'
+ARG ESPFLASH_VERSION='4.5.0'
 
 # see https://crates.io/crates/esp-generate
 # see https://github.com/esp-rs/esp-generate/releases
 # renovate: datasource=github-releases depName=esp-rs/esp-generate
-ARG ESP_GENERATE_VERSION='1.1.0'
+ARG ESP_GENERATE_VERSION='1.3.0'
 
 # see https://github.com/devcontainers/images/tree/main/src/base-debian/manifest.json
 # see https://github.com/devcontainers/images/tree/main/src/base-debian/history
-FROM mcr.microsoft.com/devcontainers/base:2.1.3-trixie
+FROM mcr.microsoft.com/devcontainers/base:2.1.13-trixie
 
 RUN <<'EOF'
 #!/usr/bin/bash
